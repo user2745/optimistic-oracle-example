@@ -53,3 +53,12 @@ export CUSTOM_NODE_URL="Your node url here"
 export ETHERSCAN_API_KEY="Your etherscan api key here"
 yarn hardhat etherscan-verify --network goerli --license AGPL-3.0 --force-license
 ```
+
+
+## Additional Notes
+
+The DepositBox is a good example of a way  to integrate the optimistic oracle into a lending protocol
+
+What this means is the OO can be used to request the price of assets @ withdrawl from the protocol, to ensure accurate prices for assets.
+
+This is extremely important:  See this Article highlighting how Mango Markets was hacked due to an oracle manipulation attack on the protocol [Mago Markets Hack](https://compoziteresearch.medium.com/oracle-manipulation-risks-in-lending-pools-0458c362d294)
